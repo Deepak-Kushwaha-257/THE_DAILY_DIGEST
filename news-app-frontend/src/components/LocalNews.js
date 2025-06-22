@@ -20,7 +20,7 @@ const LocalNews = () => {
   const fetchNews = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/news');
+      const response = await fetch('https://the-daily-digest.onrender.com/api/news');
       if (!response.ok) {
         throw new Error('Failed to fetch news');
       }
