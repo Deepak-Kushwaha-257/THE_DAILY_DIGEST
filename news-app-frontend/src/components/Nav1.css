@@ -1,0 +1,261 @@
+.enhanced-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.enhanced-navbar:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.brand-link {
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.brand-link:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.brand-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  transition: width 0.3s ease;
+}
+
+.brand-link:hover::after {
+  width: 100%;
+}
+
+.enhanced-nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  transition: left 0.3s ease;
+}
+
+.enhanced-nav-link:hover::before {
+  left: 0;
+}
+
+.enhanced-nav-link:hover {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enhanced-nav-link:active {
+  transform: translateY(0);
+}
+
+.post-news-link {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  color: white !important;
+  font-weight: 700;
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+  animation: pulse-glow 2s infinite;
+}
+
+.post-news-link:hover {
+  background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(238, 90, 36, 0.5) !important;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(238, 90, 36, 0.5);
+  }
+}
+
+.navbar-toggler {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav {
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+  width: 80%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .enhanced-nav-link {
+    color: #333 !important;
+    margin: 0.2rem 0;
+  }
+
+  .enhanced-nav-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea !important;
+  }
+
+  .post-news-link {
+    color: white !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  .post-news-link:hover {
+    color: white !important;
+  }
+}
+
+/* Pulse animation for active states */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-link.active {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth scrolling indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  transition: width 0.3s ease;
+}
+
+/* Logo Styles - Add this to your Nav1.css file */
+
+/* Logo Styles - Add this to your Nav1.css file */
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    display: none; /* Hide by default until loaded */
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Update brand-link to better accommodate logo */
+.brand-link {
+    display: flex !important;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Hide broken image icon */
+.navbar-logo::before,
+.navbar-logo::after {
+    display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 32px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 28px;
+        margin-right: 6px;
+    }
+}
