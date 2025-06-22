@@ -179,7 +179,7 @@ export class News extends Component {
                 <strong>📊 Total Articles:</strong> {this.state.totalResults}
               </div>
               <div>
-                <strong>📄 Showing:</strong> {filteredArticles.length} articles
+                <strong>📄 Showing:</strong> {filteredArticles && filteredArticles.length} articles
               </div>
               <div>
                 <strong>📖 Page:</strong> {this.state.page_no} of {totalPages}
