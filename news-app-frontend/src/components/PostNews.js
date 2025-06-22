@@ -32,7 +32,7 @@ const PostNews = () => {
   const [errors, setErrors] = useState({});
 
   // API endpoint - change this to your backend URL
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const API_BASE_URL = "https://the-daily-digest.onrender.com/";
 
   const categories = [
     "Breaking News",
